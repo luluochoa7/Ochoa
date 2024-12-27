@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ContactUs() {
     return (
         <div className="min-h-screen bg-gray-100">
@@ -6,31 +8,31 @@ export default function ContactUs() {
                 <div className="container mx-auto flex justify-between items-center p-4">
                     {/* Logo */}
                     <div className="text-xl font-bold">
-                        <a href="/">[Lawyer's Name]</a>
+                        <Link href="/">Humberto Ochoa</Link>
                     </div>
 
                     {/* Navigation Links */}
                     <nav>
                         <ul className="flex space-x-6">
                             <li>
-                                <a href="/" className="hover:text-gray-300">
+                                <Link href="/" className="hover:text-gray-300">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/#about" className="hover:text-gray-300">
+                                <Link href="/#about" className="hover:text-gray-300">
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/#services" className="hover:text-gray-300">
+                                <Link href="/#services" className="hover:text-gray-300">
                                     Services
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/contact-us" className="hover:text-gray-300">
+                                <Link href="/contact-us" className="hover:text-gray-300">
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

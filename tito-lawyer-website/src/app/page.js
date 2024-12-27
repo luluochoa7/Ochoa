@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -8,31 +9,31 @@ export default function Home() {
           <div className="container mx-auto flex justify-between items-center p-4">
             {/* Logo */}
             <div className="text-xl font-bold">
-              <a href="#home">Humberto Ochoa</a>
+              <Link href="#home">Humberto Ochoa</Link>
             </div>
 
             {/* Navigation Links */}
             <nav>
               <ul className="flex space-x-6">
                 <li>
-                  <a href="#about" className="hover:text-gray-300">
+                  <Link href="#about" className="hover:text-gray-300">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-gray-300">
+                  <Link href="#services" className="hover:text-gray-300">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#testimonials" className="hover:text-gray-300">
+                  <Link href="#testimonials" className="hover:text-gray-300">
                     Testimonials
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/contact-us" className="hover:text-gray-300">
+                  <Link href="/contact-us" className="hover:text-gray-300">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -52,7 +53,7 @@ export default function Home() {
           <div className="bg-black/50 w-full h-full absolute top-0 left-0"></div>
           <div className="relative z-10 text-center px-8">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              Welcome to Humberto Ochoa's Law Firm
+              Welcome to Ochoa Law Firm
             </h1>
             <p className="text-lg sm:text-xl">
               Providing professional and reliable legal services tailored to your needs.
@@ -69,7 +70,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-4">About Us</h2>
               <p className="text-lg text-gray-700">
-                With years of experience in various areas of law, Humberto Ochoa's Law Firm is
+                With years of experience in various areas of law, Ochoa Law Firm is
                 committed to ensuring justice and providing personalized legal advice.
               </p>
             </div>
@@ -115,7 +116,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">What Our Clients Say</h2>
             <blockquote className="text-lg text-gray-700 italic">
-              "I couldn’t have asked for a better experience. Humberto Ochoa was professional, thorough, and truly cared about my case."
+              I couldn’t have asked for a better experience. Humberto Ochoa was professional, thorough, and truly cared about my case.
             </blockquote>
             <p className="mt-4 font-semibold">- Client Name</p>
           </div>
@@ -127,17 +128,17 @@ export default function Home() {
           <p className="text-lg">
             Contact us today to schedule your consultation and take the first step toward resolving your legal matters.
           </p>
-          <a
+          <Link
               href="/contact-us"
               className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 hover:bg-gray-200 rounded font-medium"
           >
             Contact Us
-          </a>
+          </Link>
         </section>
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Humberto Ochoa's Law Firm. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ochoa Law Firm. All rights reserved.</p>
         </footer>
       </div>
   );
