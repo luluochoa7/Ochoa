@@ -53,8 +53,25 @@ export default function ContactUs() {
                     {/* Contact Form Section */}
                     <div className="p-8">
                         <form
-                            action="/thank-you" // Redirect to a "thank you" page after submission
-                            method="POST"
+                            onSubmit={async (e) => {
+                                e.preventDefault();
+                                const formData = new FormData(e.target);
+                                const data = Object.fromEntries(formData.entries());
+
+                                const response = await fetch('/api/send-email', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify(data),
+                                });
+
+                                if (response.ok) {
+                                    alert('Your message has been sent!');
+                                } else {
+                                    alert('There was an error sending your message.');
+                                }
+                            }}
                             className="space-y-6"
                         >
                             {/* Name Field */}
